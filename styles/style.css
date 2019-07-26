@@ -1,0 +1,179 @@
+/* Universal */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+html {
+    font-size: 100%; 
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFFFFB;
+}
+
+/* Gallery Section*/
+.gallery-wrapper {
+    white-space: nowrap;
+    height: 35rem;
+    left: 21rem;
+    /*vertically center*/
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.gallery-wrapper > .card {
+    display: inline-block;
+    float: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    height: inherit;
+}
+
+.gallery-wrapper > .card:first-child {
+    left: 0;
+}
+
+.gallery-wrapper > .card:last-child {
+    margin-right: 4rem;
+}
+
+img {
+    image-orientation: from-image;
+    margin-left: 1rem;
+    height: 100%;
+    width: auto;
+}
+
+/* Nav Section*/
+.navigation {
+    width: 14rem;
+    height: 100%;
+    min-height: 35rem;
+    position: fixed;
+    top: 0;
+    z-index: 999999;
+    left: 6rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #FFFFFB;
+    opacity: 0.95;
+}
+
+.nav-container {
+    position: relative;
+    height: 35rem;
+    top: 50%;
+    margin-top: -17.5rem;
+    padding-top: 2rem;
+}
+
+/* Logo */
+.logo {
+    margin-bottom: 3em;
+}
+
+.logo a {
+    color: #444444;
+    font-weight: 100;
+}
+
+.logo a:hover {
+    text-decoration: none;
+    color: #222222;
+    font-weight: 200;
+}
+
+
+/* menu */
+.menu-wrap ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;    
+}
+
+.menu-wrap .category {
+    border-top: 1px solid #cccccc;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    cursor: pointer;
+    font-weight: 500;
+    color: #444444;
+}
+
+.menu-wrap .category:hover {
+    font-weight: 600;
+    color: #000000;
+}
+
+.category-container {
+    display: none;
+    padding-top: 0.2rem;
+    padding-bottom: 0.4rem;
+}
+
+.category-container li {    
+    margin-bottom: 0.4em;
+}
+
+.category-container li:last-child {
+    margin-bottom: 0em;
+}
+
+.main-menu a {
+    font-weight: 200;
+    color: #444444;
+}
+
+.main-menu a:hover {
+    text-decoration: none;
+    font-weight: 340;
+    color: #000000;
+}
+
+.selected a {
+    color: #996633;
+}
+
+.selected a:hover {
+    color: #734d26;
+}
+
+/* Animation */
+.nav-animate {
+    animation-name: fadeIn, slideDown;
+    animation-duration: 1.5s;
+}
+
+.photo-animate {
+    animation-name: fadeIn, slideLeft;
+    animation-duration: 1.5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    65% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        top: 0;
+    }
+    to {
+        top: 25hv;
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        left: 100vw;
+    }
+    to {
+        left: 21w;
+    }
+}
