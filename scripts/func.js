@@ -1,5 +1,5 @@
 function show(event) {
-    var otherList = document.getElementsByClassName("category_container");
+    var otherList = document.getElementsByClassName("category-container");
     var list = event.target.nextElementSibling;
     const status = list.style.display;
     var i;

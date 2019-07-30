@@ -1,18 +1,28 @@
 /* Universal */
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap');
 
 html {
-    font-size: 100%; 
+    font-size: 16px;
+    line-height: 1.5;
+    text-decoration: none;
     font-family: 'Roboto', sans-serif;
+}
+
+body {
     background-color: #FFFFFB;
+    margin: 0;
 }
 
 /* text section for about page*/
 .text-container {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
     display: -webkit-flex;
     flex-direction: row;
     height: 20rem;
     width: 50rem;;
+    padding-bottom: 5rem;
     position: absolute;
     left: 21rem;
     top: 50%;
@@ -38,6 +48,9 @@ html {
 
 /* Gallery Section*/
 .gallery-wrapper {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
     white-space: nowrap;
     height: 35rem;
     left: 21rem;
@@ -74,6 +87,9 @@ img {
 
 /* Nav Section*/
 .navigation {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
     width: 14rem;
     height: 100%;
     min-height: 35rem;
@@ -88,6 +104,9 @@ img {
 }
 
 .nav-container {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
     position: relative;
     height: 35rem;
     top: 50%;
@@ -97,18 +116,25 @@ img {
 
 /* Logo */
 .logo {
-    margin-bottom: 3em;
+    margin-bottom: 3rem;
+}
+
+.logo h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    font-weight: 100;
 }
 
 .logo a {
     color: #444444;
-    font-weight: 100;
+    text-decoration: none;
 }
 
 .logo a:hover {
     text-decoration: none;
     color: #222222;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 /* menu */
@@ -129,7 +155,7 @@ img {
 
 .menu-wrap .category:hover {
     font-weight: 400;
-    color: #000000;
+    color: #222222;
 }
 
 .category-container {
@@ -147,18 +173,19 @@ img {
 }
 
 .main-menu a {
-    font-weight: 200;
+    font-weight: 100;
+    text-decoration: none;
     color: #444444;
 }
 
 .main-menu a:hover {
     text-decoration: none;
-    font-weight: 340;
-    color: #000000;
+    font-weight: 300;
+    color: #222222;
 }
 
 .selected a {
-    color: #996633;
+    color: #86592d;
 }
 
 .selected a:hover {
