@@ -3,8 +3,8 @@ var flag = 0;
 function lazyLoad() {
     var lazy = document.getElementsByClassName('lazy');
     if (flag == 0) {
-        for (var j = 0; j < 3; j++) {
-            lazy[j].src =lazy[j].getAttribute('data-src');
+        for (var k = 0; k < 3; k++) {
+            lazy[k].src =lazy[k].getAttribute('data-src');
         }
         flag = 1;
     }
