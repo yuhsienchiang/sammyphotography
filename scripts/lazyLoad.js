@@ -1,7 +1,14 @@
+var flag = 0;
+
 function lazyLoad() {
     var lazy = document.getElementsByClassName('lazy');
-
-    for (var i = 0; i < lazy.length; i++) {
+    if (flag == 0) {
+        for (var j = 0; j < 3; j++) {
+            lazy[j].src =lazy[j].getAttribute('data-src');
+        }
+        flag = 1;
+    }
+    for (var i = 3; i < lazy.length; i++) {
         if(isInViewport(lazy[i])){
             lazy[i].src =lazy[i].getAttribute('data-src');
         }
@@ -19,13 +26,5 @@ function isInViewport(el){
     );
 }
 
-function registerListener(event, func) {
-    if (window.addEventListener) {
-        window.addEventListener(event, func);
-    } else {
-        window.attachEvent('on' + event, func);
-    }
-}
-
-registerListener('load', lazyLoad);
-registerListener('scroll', lazyLoad);
+window.addEventListener("load", lazyLoad);
+window.addEventListener("scroll", lazyLoad);
