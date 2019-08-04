@@ -74,7 +74,8 @@ img {
 }
 
 .logo {
-    display: -webkit-flex;
+        -webkit-display: flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 2vh 4vw 2vh 5vw;
@@ -157,7 +158,8 @@ img {
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;
-    display: -webkit-flex;
+    -webkit-display: flex;
+    display: flex;
     flex-direction: row;
     height: 40vh;
     width: 94vw;
@@ -185,8 +187,6 @@ img {
 }
 
 /* Animation */
-
-
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -216,11 +216,11 @@ img {
 @media only screen and (min-width: 480px) {
 
     .gallery-wrapper {
-        height: 65vh;
+        height: 68vh;
         /*vertically center*/
         position: absolute;
         top: 50%;
-        margin-top: -32.5vh;
+        margin-top: -34vh;
     }
 
     .navigation {
