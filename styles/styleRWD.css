@@ -203,7 +203,6 @@ img {
     from {
         top: 0;
     }
-
 }
 
 @keyframes slideLeft {
@@ -217,11 +216,11 @@ img {
 @media only screen and (min-width: 480px) {
 
     .gallery-wrapper {
-        height: 75vh;
+        height: 65vh;
         /*vertically center*/
         position: absolute;
         top: 50%;
-        margin-top: -37.5vh;
+        margin-top: -32.5vh;
     }
 
     .navigation {
@@ -231,7 +230,6 @@ img {
     .text-container {
         height: 60vh;
         width: 94vw;
-
         top: 50%;
         margin: -30vh 3vw 0 3vw;
     }
