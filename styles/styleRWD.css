@@ -11,6 +11,7 @@ html {
 body {
     background-color: #FFFFFB;
     margin: 0;
+/*    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);*/
 }
 
 /* Gallery */
@@ -216,11 +217,11 @@ img {
 @media only screen and (min-width: 480px) {
 
     .gallery-wrapper {
-        height: 68vh;
+        height: 75vh;
         /*vertically center*/
         position: absolute;
         top: 50%;
-        margin-top: -34vh;
+        margin-top: -37.5vh;
     }
 
     .navigation {
