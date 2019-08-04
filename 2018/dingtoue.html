@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="../styles/style.css">    
+        <link rel="stylesheet" href="../styles/styleRWD.css">    
     </head>
     <body>
 
@@ -16,6 +16,10 @@
                 <div class="nav-container-top">
                     <div class="logo">
                         <h2><a href="../home.html">Sammy</a></h2>
+                        <button class="mobile-menu-trigger" onclick="mobileMenuTrigger()">
+                            <i id="open" class="material-icons">menu</i>
+                            <i id="collapse" class="material-icons">close</i>
+                        </button>
                     </div>
                     <div class="menu-wrap">
                         <!-- menu start -->
@@ -95,7 +99,7 @@
             </div>
         </div>
 
-
+        <script src="../scripts/mobileMenuTrigger.js"></script>
         <script src="../scripts/menuDropdown.js"></script>
         <script src="../scripts/lazyLoad.js"></script>
     </body>
