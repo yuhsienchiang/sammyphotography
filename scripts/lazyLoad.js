@@ -2,7 +2,6 @@ var flag = 0;
 
 function lazyLoad() {
     var lazy = document.getElementsByClassName('lazy');
-    
     for (var i = 0; i < lazy.length; i++) {
         if(isInViewport(lazy[i])){
             lazy[i].src =lazy[i].getAttribute('data-src');
