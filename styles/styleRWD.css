@@ -17,7 +17,7 @@ body {
 /* Gallery */
 img {
     image-orientation: from-image;
-    margin-left: 1rem;
+    display: block;
     height: 100%;
     width: auto;
 }
@@ -34,22 +34,52 @@ img {
     margin-top: -27.5vh;
 }
 
-.gallery-wrapper > .card {
+.gallery-wrapper > .img-wrapper {
     display: inline-block;
     float: none;
     border: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0 0 1.5rem;
     height: inherit;
     background-color: #FFFFFB;
 }
 
-.gallery-wrapper > .card:first-child {
+.gallery-wrapper > .img-wrapper:first-child {
     left: 0;
 }
 
-.gallery-wrapper > .card:last-child {
+.gallery-wrapper > .img-wrapper:last-child {
     margin-right: 13vw;
+}
+
+.progressive {
+    position: relative;
+    overflow: hidden;
+    outline: none;
+}
+
+img.preview {
+    filter: blur(2vw);
+    transform: scale(1.1);
+}
+
+img.reveal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    will-change: transform, opacity;
+    animation: reveal 1s ease-out;
+}
+
+@keyframes reveal {
+    from {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 
@@ -446,7 +476,6 @@ img {
     .selected a:hover {
         color: #734d26;
     }
-
 
     .gallery-wrapper {
         height: 30rem;
