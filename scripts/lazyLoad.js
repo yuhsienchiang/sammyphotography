@@ -19,9 +19,6 @@ if (window.addEventListener && window.requestAnimationFrame && document.getEleme
                 observer.observe(document.body, { subtree: true, childList: true, attributes: true, characterData: true });
             }
 
-            // initial check
-            inView();
-
             // throttled scroll/resize
             function scroller() {
 
