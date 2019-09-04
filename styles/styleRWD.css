@@ -14,74 +14,6 @@ body {
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
-/* Gallery */
-img {
-    image-orientation: from-image;
-    display: block;
-    height: 100%;
-    width: auto;
-}
-
-.gallery-wrapper {
-    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-    box-sizing: border-box;
-    white-space: nowrap;
-    height: 55vh;
-    /*vertically center*/
-    position: absolute;
-    top: 50%;
-    margin-top: -27.5vh;
-}
-
-.gallery-wrapper > .img-wrapper {
-    display: inline-block;
-    float: none;
-    border: none;
-    padding: 0;
-    margin: 0 0 0 1.3rem;
-    height: inherit;
-    background-color: #FFFFFB;
-}
-
-.gallery-wrapper > .img-wrapper:first-child {
-    left: 0;
-}
-
-.gallery-wrapper > .img-wrapper:last-child {
-    margin-right: 13vw;
-}
-
-.progressive {
-    position: relative;
-    overflow: hidden;
-    outline: none;
-}
-
-img.preview {
-    filter: blur(0.5vw);
-    transform: scale(1.05);
-}
-
-img.reveal {
-    position: absolute;
-    left: 0;
-    top: 0;
-    will-change: transform, opacity;
-    animation: reveal 0.7s ease-out;
-}
-
-@keyframes reveal {
-    from {
-        transform: scale(1.05);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
 
 /* Nav Section */
 .navigation {
@@ -123,12 +55,15 @@ img.reveal {
 
 .logo .mobile-menu-trigger {
     height: inherit;
-    width: 10vw;
+    width: 12vw;
     background-color: inherit;
-    font-size: 6vw;
     border: 0;
     margin: 0;
     padding: 0;   
+}
+
+.logo .mobile-menu-trigger i {
+    font-size: 4vw;
 }
 
 .logo a {
@@ -184,7 +119,69 @@ img.reveal {
 }
 
 
-/* text section for about page*/
+/* Gallery Section */
+img {
+    display: block;
+    height: 100%;
+    width: auto;
+}
+
+.gallery-wrapper {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    white-space: nowrap;
+    height: 55vh;
+    /*vertically center*/
+    position: absolute;
+    top: 50%;
+    margin-top: -27.5vh;
+}
+
+.gallery-wrapper > .img-wrapper {
+    display: inline-block;
+    float: none;
+    border: none;
+    padding: 0;
+    margin: 0 0 0 1.3rem;
+    height: inherit;
+    background-color: #FFFFFB;
+}
+
+.gallery-wrapper > .img-wrapper:first-child {
+    left: 0;
+}
+
+.gallery-wrapper > .img-wrapper:last-child {
+    margin-right: 13vw;
+}
+
+.progressive {
+    position: relative;
+    overflow: hidden;
+    outline: none;
+}
+
+img.preview {
+    filter: blur(0.5vw);
+    transform: scale(1.05);
+}
+
+img.reveal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    will-change: transform, opacity;
+    animation: reveal 0.7s ease-out;
+}
+
+.photo-animate {
+    animation-name: fadeIn, slideLeft;
+    animation-duration: 1.2s;
+}
+
+
+/* Text Section */
 .text-container {
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
@@ -217,6 +214,7 @@ img.reveal {
     font-size: 4vw;
 }
 
+
 /* Animation */
 @keyframes fadeIn {
     0% {
@@ -248,10 +246,28 @@ img.reveal {
     }
 }
 
+@keyframes reveal {
+    from {
+        transform: scale(1.05);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 
 /* small (landscape phone) */
 @media only screen and (min-width: 480px) {
 
+    /*Nav Section */
+    .navigation {
+        display: none;
+    }
+
+
+    /*Gallery Section */
     .gallery-wrapper {
         height: 75vh;
         /*vertically center*/
@@ -260,10 +276,8 @@ img.reveal {
         margin-top: -37.5vh;
     }
 
-    .navigation {
-        display: none;
-    }
 
+    /*Text Section */
     .text-container {
         height: 60vh;
         width: 94vw;
@@ -277,92 +291,31 @@ img.reveal {
     }
 }
 
-/* medium (tablets portrait) */ 
+
+/* medium (tablets portrait) */
 @media only screen and (min-width: 765px) {
 
+    /* Nav Section */
     .navigation {
-        display: block;
-        width: 21vw;
-        height: 100%;
-        min-height: 30rem;
-        position: fixed;
-        top: 0;
-        z-index: 999999;
-        left: 5vw;
-        padding-left: 2vw;
-        padding-right: 2vw;
-        opacity: 0.95;
-    }
-
-    .nav-container {
-        height: 60vh;
-        top: 50%;
-        margin-top: -30vh;
-        padding-top: 10vh;
-    }
-
-    .logo {
-        position: relative;
-        top: 0;
-        left: 0;
-        height: auto;
-        width: auto;
-        text-align: left;
-        padding: 0;
-        margin: 0 0 3rem 0;
-    }
-
-    .logo h2 {
-        margin-top: 0;
-        margin-bottom: 0.5rem;
-        font-size: 2rem;
-        font-weight: 100;
-    }
-
-    .mobile-menu-trigger {
-        display: none;
+        display:block;
     }
 
     .menu-wrap {
-        padding-top: 0;
-        margin: 0;
-        display: block;
-        height: auto;
-        text-align: left;
+        font-size: 2.4vh;
     }
 
-    .menu-wrap .category {
-        border-top: 1px solid #cccccc;
-        padding-top: 0.4rem;
-        padding-bottom: 0.4rem;
-        cursor: pointer;
-        font-weight: 300;
-        color: #444444;
-    }
 
-    .category-container {
-        padding-top: 0.2rem;
-        padding-bottom: 0.4rem;
-    }
-
-    .category-container li {    
-        margin-bottom: 0.4em;
-    }
-
-    .category-container li:last-child {
-        margin-bottom: 0em;
-    }
-
+    /* Gallery Section */
     .gallery-wrapper {
         height: 60vh;
-        left: 28vw;
-        /*vertically center*/
+        left: 2vw;
         position: absolute;
         top: 50%;
         margin-top: -30vh;
     }
 
-    /* text section for about page*/
+
+    /* Text Section */
     .text-container {
         height: 30vh;
         width: auto;
@@ -371,24 +324,13 @@ img.reveal {
         left: 35vw;
         margin: -15vh 0 0 0;
     }
-
-
-    .nav-animate {
-        animation-name: fadeIn, slideDown;
-        animation-duration: 1.2s;
-    }
-
-    .photo-animate {
-        animation-name: fadeIn, slideLeft;
-        animation-duration: 1.2s;
-    }
 }
-
 
 
 /* large (desktop and tablet landscape) */
 @media only screen and (min-width: 992px) {
 
+    /* Nav Section */
     .navigation {
         display: block;
         width: 14rem;
@@ -440,6 +382,7 @@ img.reveal {
     }
 
     .menu-wrap {
+        font-size: 1rem;
         padding-top: 0;
         margin: 0;
         display: block;
@@ -484,6 +427,13 @@ img.reveal {
         color: #734d26;
     }
 
+    .nav-animate {
+        animation-name: fadeIn, slideDown;
+        animation-duration: 1.2s;
+    }
+
+
+    /* Gallery Section */
     .gallery-wrapper {
         height: 30rem;
         left: 21rem;
@@ -495,7 +445,7 @@ img.reveal {
     }
 
 
-    /* text section for about page*/
+    /* Text Section */
     .text-container {
         height: 20rem;
         width: auto;
@@ -521,16 +471,6 @@ img.reveal {
     .text-container p {
         font-weight: 100;
         font-size: 1rem;
-    }
-
-    .nav-animate {
-        animation-name: fadeIn, slideDown;
-        animation-duration: 1.2s;
-    }
-
-    .photo-animate {
-        animation-name: fadeIn, slideLeft;
-        animation-duration: 1.2s;
     }
 
 }

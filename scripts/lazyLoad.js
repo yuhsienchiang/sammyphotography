@@ -21,13 +21,15 @@ if (window.addEventListener && window.requestAnimationFrame && document.getEleme
 
             // throttled scroll/resize
             function scroller() {
-
+                
                 timer = timer || setTimeout(function () {
                     timer = null;
                     inView();
                 }, 300);
-
+                
             }
+            
+            inView();
 
 
             // image in view?
@@ -36,7 +38,7 @@ if (window.addEventListener && window.requestAnimationFrame && document.getEleme
                 if (pItem.length) {
                     requestAnimationFrame(function () {
 
-                        var wW = window.innerWidth, cRect, cL, cR, p = 0;
+                        var wW = window.innerWidth || document.documentElement.clientWidth, cRect, cL, cR, p = 0;
                         while (p < pItem.length) {
 
                             cRect = pItem[p].getBoundingClientRect();
