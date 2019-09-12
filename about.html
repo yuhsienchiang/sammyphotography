@@ -11,21 +11,25 @@
     </head>
     <body>
 
+        <!-- Header -->
+        <header class="slide-down-animate">
+            <div class="logo">
+                <h2><a href="home.html">Sammy</a></h2>
+                <button class="mobile-menu-trigger">
+                    <i id="open" class="material-icons">menu</i>
+                    <i id="collapse" class="material-icons">close</i>
+                </button>
+            </div>
+        </header>
+        
         <!-- navigation -->
         <section class="navigation">
-            <div class="nav-container nav-animate">
+            <div class="nav-container slide-down-animate">
                 <div class="nav-container-top">
-                    <div class="logo">
-                        <h2><a href="home.html">Sammy</a></h2>
-                        <button class="mobile-menu-trigger" onclick="mobileMenuTrigger()">
-                            <i id="open" class="material-icons">menu</i>
-                            <i id="collapse" class="material-icons">close</i>
-                        </button>
-                    </div>
+                    <!-- menu start -->
                     <div class="menu-wrap">
-                        <!-- menu start -->
                         <ul class="main-menu">
-                            <li class="category" onclick="show(event)">
+                            <li class="category">
                                 2019
                             </li>
                             <li class="category-container">
@@ -35,7 +39,7 @@
                                     <li><a href="2019/daily.html">Daily</a></li>
                                 </ul>
                             </li>
-                            <li class="category" onclick="show(event)">
+                            <li class="category">
                                 2018
                             </li>
                             <li class="category-container">
@@ -53,14 +57,14 @@
             </div>
         </section>
 
-        <div class="text-container photo-animate">
+        <div class="text-container slide-left-animate">
             <div class="item">
                 <img src="prof.png">
                 <span>credits/ tracy chen</span>
             </div>
             <div class="item">
                 <p>
-                    | email |
+                    | e-mail |
                     <br>
                     samy9ch@gmail.com
                     <br><br>
@@ -80,6 +84,6 @@
         </div>
 
         <script src="scripts/mobileMenuTrigger.js"></script>
-        <script src="scripts/menuDropdown.js"></script>
+        <script src="scripts/subList.js"></script>
     </body>
 </html>

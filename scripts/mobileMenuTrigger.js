@@ -1,27 +1,34 @@
+var button = document.getElementsByClassName("mobile-menu-trigger")[0];
+var menu = document.getElementsByClassName("navigation")[0];
+var openIcon = document.getElementById("open");
+var closeIcon = document.getElementById("collapse");
+
 function mobileMenuTrigger() {
-    var menu = document.getElementsByClassName("menu-wrap")[0];
-    var openIcon = document.getElementById("open");
-    var collapseIcon = document.getElementById("collapse");
-    
-    if (menu.style.display === "block") {
-        menu.style.display = "none";
-        collapseIcon.style.display = "none";
-        openIcon.style.display = "block";
-    } else {
-        menu.style.display = "block";
-        collapseIcon.style.display = "block";
+    menu.classList.add("animatable");
+    if (!menu.classList.contains("open")) {
+        menu.classList.add("open");
         openIcon.style.display = "none";
-    }
-}
-
-function menuHandle() {
-    var menu = document.getElementsByClassName("menu-wrap")[0];
-    
-    if (window.innerWidth >= 765) {
-        menu.style.display = "block";
+        closeIcon.style.display = "block";
     } else {
-        menu.style.display = "none";
+        menu.classList.remove("open");
+        openIcon.style.display = "block";
+        closeIcon.style.display = "none";
     }
 }
 
-window.addEventListener('resize', menuHandle);
+
+button.addEventListener("click", mobileMenuTrigger, false);
+
+menu.addEventListener("transitionend", function() {
+    menu.classList.remove("animatable")
+}, false);
+
+window.addEventListener("resize", function() {
+    if (window.innerWidth  >= 992) {
+        menu.classList.add("open");
+    } else {
+        menu.classList.remove("open");
+        openIcon.style.display = "block";
+        closeIcon.style.display = "none";
+    }
+}, false);

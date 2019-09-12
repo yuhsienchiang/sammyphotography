@@ -10,31 +10,35 @@
     </head>
     <body>
 
+        <!-- Header -->
+        <header class="slide-down-animate">
+            <div class="logo">
+                <h2><a href="../home.html">Sammy</a></h2>
+                <button class="mobile-menu-trigger">
+                    <i id="open" class="material-icons">menu</i>
+                    <i id="collapse" class="material-icons">close</i>
+                </button>
+            </div>
+        </header>
+
         <!-- navigation -->
         <section class="navigation">
-            <div class="nav-container nav-animate">
+            <div class="nav-container slide-down-animate">
                 <div class="nav-container-top">
-                    <div class="logo">
-                        <h2><a href="../home.html">Sammy</a></h2>
-                        <button class="mobile-menu-trigger" onclick="mobileMenuTrigger()">
-                            <i id="open" class="material-icons">menu</i>
-                            <i id="collapse" class="material-icons">close</i>
-                        </button>
-                    </div>
+                    <!-- menu start -->
                     <div class="menu-wrap">
-                        <!-- menu start -->
                         <ul class="main-menu">
-                            <li class="category" onclick="show(event)">
+                            <li class="category">
                                 2019
                             </li>
-                            <li class="category-container" style="display: block">
+                            <li class="category-container open">
                                 <ul>
                                     <li><a href="taipei.html">Taipei</a></li>
                                     <li class="selected"><a href="san-francisco.html">San Francisco</a></li>
                                     <li><a href="daily.html">Daily</a></li>
                                 </ul>
                             </li>
-                            <li class="category" onclick="show(event)">
+                            <li class="category">
                                 2018
                             </li>
                             <li class="category-container">
@@ -53,7 +57,7 @@
         </section>
 
         <!-- Photo -->
-              <div class="gallery-wrapper photo-animate">
+        <div class="gallery-wrapper slide-left-animate">
             <div class="img-wrapper progressive replace" data-large="images/san-francisco/0001.jpg">
                 <img src="images/san-francisco/0001-blur.jpg" class="preview"  alt="Laziness"/>
                 <noscript>
@@ -87,7 +91,7 @@
         </div>
 
         <script src="../scripts/mobileMenuTrigger.js"></script>
-        <script src="../scripts/menuDropdown.js"></script>
+        <script src="../scripts/subList.js"></script>
         <script src="../scripts/lazyLoad.js"></script>
     </body>
 </html>
