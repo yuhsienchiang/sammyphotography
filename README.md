@@ -29,7 +29,7 @@ This project is for learning web development, specifically front-end development
 - [ ] Turn this static webpage into a web application
 
 **Webpage URL**
-[http://www.sammyphotography.com.s3-website-ap-northeast-1.amazonaws.com]([http://www.sammyphotography.com.s3-website-ap-northeast-1.amazonaws.com)
+* [http://www.sammyphotography.com.s3-website-ap-northeast-1.amazonaws.com]([http://www.sammyphotography.com.s3-website-ap-northeast-1.amazonaws.com)
 
 
 ## Screen Shots
