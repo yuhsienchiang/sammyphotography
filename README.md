@@ -1,8 +1,8 @@
-##Photography Gallery Page
+## Photography Gallery Page
 
 This project is for learning web development, specifically front-end development for now.
 
-##To-Do
+## To-Do
 
 **Design**
 - [x] Decide webpage content structure
@@ -29,11 +29,13 @@ This project is for learning web development, specifically front-end development
 - [ ] Turn this static webpage into a web application
 
 **Webpage URL**
-http://www.sammyphotography.com.s3-website-ap-northeast-1.amazonaws.com
+[http://www.sammyphotography.com.s3-website-ap-northeast-1.amazonaws.com]([http://www.sammyphotography.com.s3-website-ap-northeast-1.amazonaws.com)
 
-##Screen Shots
 
-##Credits
+## Screen Shots
+![Alt text](/screen-shot.png?raw=true)
+
+## Credits
 - Content Structure / Layout design
   * [Format](https://www.format.com)
   * [Leo Liu](https://leoliugraphy.format.com)
