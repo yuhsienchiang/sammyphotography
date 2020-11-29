@@ -169,7 +169,8 @@ img {
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;
-    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
     height: 55vh;
     /*vertically center*/
     position: absolute;
@@ -521,12 +522,12 @@ img.reveal {
 
     /* Gallery Section */
     .gallery-wrapper {
-        height: 34rem;
+        height: 40rem;
         left: 19rem;
         /*vertically center*/
         position: absolute;
         top: 50%;
-        margin-top: -17rem;
+        margin-top: -20rem;
         will-change: transform;
     }
 
