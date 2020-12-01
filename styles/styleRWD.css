@@ -25,7 +25,7 @@ header {
     opacity: 0.9;
     z-index: 150;
     height: auto;
-    widows: 100vw;
+    width: 100vw;
 }
 
 .logo {
@@ -184,7 +184,7 @@ img {
     border: none;
     padding: 0;
     margin: 0 0 0 0.5rem;
-    height: inherit;
+    height: 100%;
     background-color: #FFFFFB;
 }
 
@@ -327,11 +327,11 @@ img.reveal {
 
     /*Gallery Section */
     .gallery-wrapper {
-        height: 75vh;
+        height: 60vh;
         /*vertically center*/
         position: absolute;
         top: 50%;
-        margin-top: -37.5vh;
+        margin-top: -30vh;
     }
 
 
@@ -522,12 +522,15 @@ img.reveal {
 
     /* Gallery Section */
     .gallery-wrapper {
-        height: 40rem;
+        height: 80vh;
+        min-height: 450px;
         left: 19rem;
+        
+        
         /*vertically center*/
         position: absolute;
         top: 50%;
-        margin-top: -20rem;
+        margin-top: -40vh;
         will-change: transform;
     }
 
